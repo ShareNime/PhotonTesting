@@ -1,0 +1,705 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp-Editor.csproj": {}
+  },
+  "projects": {
+    "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp-Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp-Editor.csproj",
+        "projectName": "Assembly-CSharp-Editor",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp-Editor.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\Assembly-CSharp-Editor\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonChat.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonChat.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.Culling.Editor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.Culling.Editor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoHubEditor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoHubEditor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoSlotcarEditor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoSlotcarEditor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp.csproj",
+        "projectName": "Assembly-CSharp",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\Assembly-CSharp.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\Assembly-CSharp\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonChat.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonChat.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.Culling.Editor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.Culling.Editor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoHubEditor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoHubEditor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoSlotcarEditor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoSlotcarEditor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PhotonChat.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PhotonChat.csproj",
+        "projectName": "PhotonChat",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonChat.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PhotonChat\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj",
+        "projectName": "PhotonRealtime",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PhotonRealtime\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj",
+        "projectName": "PhotonUnityNetworking",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PhotonUnityNetworking\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj",
+        "projectName": "PhotonUnityNetworking.Demos",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PhotonUnityNetworking.Demos\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj",
+        "projectName": "PhotonUnityNetworking.Editor",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PhotonUnityNetworking.Editor\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj",
+        "projectName": "PhotonUnityNetworking.Utilities",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PhotonUnityNetworking.Utilities\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.Culling.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.Culling.Editor.csproj",
+        "projectName": "PhotonUnityNetworking.Utilities.Culling.Editor",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.Culling.Editor.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PhotonUnityNetworking.Utilities.Culling.Editor\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj",
+        "projectName": "PhotonUnityNetworking.Utilities.PhotonPlayer.Editor",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Editor.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoHubEditor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoHubEditor.csproj",
+        "projectName": "PunDemos.DemoHubEditor",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoHubEditor.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PunDemos.DemoHubEditor\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonRealtime.csproj"
+              },
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoSlotcarEditor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoSlotcarEditor.csproj",
+        "projectName": "PunDemos.DemoSlotcarEditor",
+        "projectPath": "D:\\UnityProject\\PhotonTesting\\PunDemos.DemoSlotcarEditor.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProject\\PhotonTesting\\Temp\\obj\\Debug\\PunDemos.DemoSlotcarEditor\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj": {
+                "projectPath": "D:\\UnityProject\\PhotonTesting\\PhotonUnityNetworking.Demos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
