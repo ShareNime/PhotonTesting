@@ -3,14 +3,21 @@ ScriptsOnlyBuild:
     Assembly-CSharp:
     - PlayerCam
     - PlayerController
+    - UILookAtCamera
     Assembly-CSharp.dll:
     - ConnectToServer
     - CreateAndJoin
     - LobbyPlayerSpawner
     - LobbyPortalScript
+    - PlayerCam
+    - PlayerController
+    - PlayerListItem
+    - PlayerListManager
     - Room
     - RoomList
     - Testing
+    - UILookAtCamera
+    - UsernameScript
     Cinemachine:
     - Cinemachine.Cinemachine3rdPersonFollow
     - Cinemachine.CinemachineComposer
@@ -19,7 +26,11 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
     Cinemachine.dll:
+    - Cinemachine.Cinemachine3rdPersonFollow
     - Cinemachine.CinemachineBrain
+    - Cinemachine.CinemachineComposer
+    - Cinemachine.CinemachinePipeline
+    - Cinemachine.CinemachineVirtualCamera
     PhotonUnityNetworking:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -37,8 +48,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformViewClassic
     - Photon.Pun.PhotonView
@@ -50,6 +59,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_InputField
@@ -62,6 +72,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI:
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
@@ -147,7 +159,13 @@ ScriptsOnlyBuild:
     methodName: CreateRoom
   - assembly: Assembly-CSharp
     fullTypeName: CreateAndJoin
+    methodName: MatchMaking
+  - assembly: Assembly-CSharp
+    fullTypeName: CreateAndJoin
     methodName: JoinRoom
+  - assembly: Assembly-CSharp
+    fullTypeName: UsernameScript
+    methodName: SaveUsername
   sceneClasses:
     Assets/Scenes/InGame.unity:
     - Class: 1
@@ -195,6 +213,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3344}
     - Class: 114
+      Script: {instanceID: 3654}
+    - Class: 114
+      Script: {instanceID: 4364}
+    - Class: 114
       Script: {instanceID: 5816}
     - Class: 114
       Script: {instanceID: 6442}
@@ -206,6 +228,14 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7048}
     - Class: 114
       Script: {instanceID: 7130}
+    - Class: 114
+      Script: {instanceID: 7568}
+    - Class: 114
+      Script: {instanceID: 8376}
+    - Class: 114
+      Script: {instanceID: 108934}
+    - Class: 114
+      Script: {instanceID: 108942}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,6 +249,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 218
       Script: {instanceID: 0}
@@ -420,6 +452,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8930}
     - Class: 114
       Script: {instanceID: 9278}
+    - Class: 114
+      Script: {instanceID: 102592}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -509,6 +543,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7568}
     - Class: 114
       Script: {instanceID: 8376}
+    - Class: 114
+      Script: {instanceID: 85928}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1296,7 +1332,7 @@ ScriptsOnlyBuild:
     className: PunTeams
   - hash:
       serializedVersion: 2
-      Hash: 77a5b0134a47cfed42b0564c1457e501
+      Hash: c033a35e45cf3b352dc39bfb011b2075
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CreateAndJoin
@@ -1416,7 +1452,7 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreak2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 1fe09010f69db8a81428d929e0a81957
+      Hash: 2877e9a0ca1bda11ee9b0444c4fcc9ed
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerController
@@ -1938,7 +1974,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 304e87045b8ea48d1ef5ddfe9563c98c
+      Hash: f10dad12213fcf97e7a05b93406e227d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Room
@@ -2638,6 +2674,30 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: bee4164d10cc7b270ed30a745f24772b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UsernameScript
+  - hash:
+      serializedVersion: 2
+      Hash: c5147038b8eb2bdb687edcda66524bfe
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UILookAtCamera
+  - hash:
+      serializedVersion: 2
+      Hash: c09d65276e0e8ef9bd0123c949b68bd7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerListItem
+  - hash:
+      serializedVersion: 2
+      Hash: e9bab912f08edf82aea746f33846f973
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerListManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/Loading.unity

@@ -9,6 +9,7 @@ using TMPro;
 public class Room : MonoBehaviourPunCallbacks
 {
     public TMP_Text Name;
+    public TMP_Text RoomPlayers;
     public void JoinRoom(){
         GameObject.Find("CreateAndJoin").GetComponent<CreateAndJoin>().JoinRoomInList(Name.text);
     }

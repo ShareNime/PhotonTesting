@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\LobbyPortalScript.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Scripts\ConnectToServer.cs" />
+    <Compile Include="Assets\Scripts\PlayerListManager.cs" />
     <Compile Include="Assets\Scripts\RoomList.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
@@ -77,9 +78,12 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\LobbyPlayerSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCam.cs" />
+    <Compile Include="Assets\Scripts\UILookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Room.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
+    <Compile Include="Assets\Scripts\PlayerListItem.cs" />
+    <Compile Include="Assets\Scripts\UsernameScript.cs" />
     <Compile Include="Assets\Scripts\CreateAndJoin.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />

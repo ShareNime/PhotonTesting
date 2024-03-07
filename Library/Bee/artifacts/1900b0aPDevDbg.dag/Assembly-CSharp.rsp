@@ -345,10 +345,14 @@
 "Assets/Scripts/LobbyPlayerSpawner.cs"
 "Assets/Scripts/LobbyPortalScript.cs"
 "Assets/Scripts/ObstacleScripts/Testing.cs"
+"Assets/Scripts/PlayerListItem.cs"
+"Assets/Scripts/PlayerListManager.cs"
 "Assets/Scripts/PlayerScripts/PlayerCam.cs"
 "Assets/Scripts/PlayerScripts/PlayerController.cs"
 "Assets/Scripts/Room.cs"
 "Assets/Scripts/RoomList.cs"
+"Assets/Scripts/UILookAtCamera.cs"
+"Assets/Scripts/UsernameScript.cs"
 -langversion:9.0
 
 /deterministic

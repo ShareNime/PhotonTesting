@@ -22,6 +22,7 @@ public class RoomList : MonoBehaviourPunCallbacks
                 print(roomList[i].Name);
                 GameObject Room = Instantiate(RoomPrefab, Vector3.zero, Quaternion.identity, GameObject.Find("Content").transform);
                 Room.GetComponent<Room>().Name.text = roomList[i].Name;
+                Room.GetComponent<Room>().RoomPlayers.text = "| Player: " + roomList[i].PlayerCount.ToString() + "/" + roomList[i].MaxPlayers.ToString();
                 AllRooms[i] = Room;
             }
         }

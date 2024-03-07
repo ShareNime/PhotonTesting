@@ -33,9 +33,11 @@ public class LobbyPortalScript : MonoBehaviourPunCallbacks
             CountDownTimer = timeToTeleport;
         }
     }
-    private void OnCollisionEnter(Collision other) {
+    
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log(Players.Count);
         if(other.gameObject.CompareTag("Player")){
-            Players.Add(other.collider);
+            Players.Add(other);
             Debug.Log("HAHAHAHA");
             Debug.Log(Players.Count);
         }
@@ -43,15 +45,35 @@ public class LobbyPortalScript : MonoBehaviourPunCallbacks
             view.RPC("CheckCountDown", RpcTarget.All, true);
         }
     }
-    private void OnCollisionExit(Collision other) {
+    private void OnTriggerExit(Collider other) {
         if(other.gameObject.CompareTag("Player")){
-            Players.Remove(other.collider);
+            Players.Remove(other);
             Debug.Log(Players.Count);
         }
         if(PhotonNetwork.IsMasterClient){
             view.RPC("CheckCountDown", RpcTarget.All, false);
         }
     }
+    // private void OnCollisionEnter(Collision other) {
+    //     Debug.Log(Players.Count);
+    //     if(other.gameObject.CompareTag("Player")){
+    //         Players.Add(other.collider);
+    //         Debug.Log("HAHAHAHA");
+    //         Debug.Log(Players.Count);
+    //     }
+    //     if(Players.Count == 2 && PhotonNetwork.IsMasterClient){
+    //         view.RPC("CheckCountDown", RpcTarget.All, true);
+    //     }
+    // }
+    // private void OnCollisionExit(Collision other) {
+    //     if(other.gameObject.CompareTag("Player")){
+    //         Players.Remove(other.collider);
+    //         Debug.Log(Players.Count);
+    //     }
+    //     if(PhotonNetwork.IsMasterClient){
+    //         view.RPC("CheckCountDown", RpcTarget.All, false);
+    //     }
+    // }
     [PunRPC]
     void CheckCountDown(bool value){
         isCountDown = value;

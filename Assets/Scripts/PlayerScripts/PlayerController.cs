@@ -9,6 +9,7 @@ using Photon.Realtime;
 using Photon.Pun;
 using System.Diagnostics.Tracing;
 using Unity.VisualScripting;
+using TMPro;
 public class PlayerController : MonoBehaviour
 {
     private Vector3 Velocity;
@@ -20,28 +21,33 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FixedJoint GrabJoint;
     [SerializeField] private Transform followTransfrom;
     [SerializeField] private CharacterController Controller;
-    [SerializeField] private Transform PlayerCamera;
+    [SerializeField] private PlayerCam PlayerCamera;
     [SerializeField] private GameObject PlayerCameraObject;
     [SerializeField] private float Speed;
     [SerializeField] private float GrabSpeed;
     [SerializeField] private float Jumpforce;
     [SerializeField] private float Sensitivity;
     [SerializeField] private float Gravity = -9.81f;
+    [SerializeField] private PhotonView view;
+    [SerializeField] private TMP_Text NickNameText;
 
     // Start is called before the first frame update
     void Start()
     {
+        NickNameText.text = view.Owner.NickName;
         currSpeed = Speed;
-        if(!GetComponent<PhotonView>().IsMine){
+        if(!view.IsMine){
             PlayerCameraObject.SetActive(false);
+            gameObject.SetActive(false);
+            PlayerCamera.enabled = false;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        if(GetComponent<PhotonView>().IsMine){
+        Cursor.lockState = CursorLockMode.Locked;   
+        if(view.IsMine){
             PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             MovePlayer();
@@ -51,7 +57,6 @@ public class PlayerController : MonoBehaviour
     }
     private void MovePlayer(){
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput);
-        
         if(Controller.isGrounded){
             Velocity.y = -1f;
             if(Input.GetKeyDown(KeyCode.Space)){
