@@ -20,10 +20,6 @@ public class PlayerListItem : MonoBehaviourPunCallbacks
             Destroy(gameObject);
         }
     }
-    public override void OnLeftRoom()
-    {
-        Destroy(gameObject);
-    }
     // Start is called before the first frame update
     void Start()
     {

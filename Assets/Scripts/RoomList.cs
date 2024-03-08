@@ -8,8 +8,13 @@ public class RoomList : MonoBehaviourPunCallbacks
 {
     public GameObject RoomPrefab;
     public GameObject[] AllRooms;
+    private void Start() {
+    }
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
+        RefreshRoomList(roomList);
+    }
+    public void RefreshRoomList(List<RoomInfo> roomList){
         for (int i = 0; i < AllRooms.Length; i++)
         {
             if(AllRooms[i] != null){

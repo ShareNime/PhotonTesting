@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
+using Photon.Realtime;
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         PhotonNetwork.ConnectUsingSettings();
     }
     public override void OnConnectedToMaster()
@@ -18,4 +20,5 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
         SceneManager.LoadScene("Lobby");
     }
+    
 }

@@ -12,7 +12,13 @@ public class UsernameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(PhotonNetwork.NickName);
         
+        if(PhotonNetwork.NickName != ""){
+            MyUsername.text = PhotonNetwork.NickName;
+
+            UsernamePanel.SetActive(false);
+        }
     }
 
     // Update is called once per frame

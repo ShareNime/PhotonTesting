@@ -25,6 +25,7 @@ public class LobbyPortalScript : MonoBehaviourPunCallbacks
     private void Update() {
         textCountDown.text = CountDownTimer.ToString("0");
         if(PhotonNetwork.IsMasterClient){
+
             Teleport();
         }
         if(isCountDown){

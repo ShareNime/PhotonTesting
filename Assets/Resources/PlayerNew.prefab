@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 6960626733753102616}
   - component: {fileID: 739893910866384825}
   - component: {fileID: 2914456243322680996}
+  - component: {fileID: 228537706855768304}
   m_Layer: 0
   m_Name: PlayerInputs (1)
   m_TagString: Untagged
@@ -228,6 +229,7 @@ MonoBehaviour:
   Gravity: -9.8
   view: {fileID: 7936459487284803822}
   NickNameText: {fileID: 2067222353968211977}
+  PlayerInputView: {fileID: 228537706855768304}
 --- !u!54 &6960626733753102616
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -291,6 +293,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1118164, y: 1.6846082, z: 1.6338933}
   m_Center: {x: 0.0032348633, y: -0.07847965, z: 0.20554674}
+--- !u!114 &228537706855768304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594612201343727390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &779315627009314309
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +399,7 @@ GameObject:
   - component: {fileID: 2429166190300612061}
   - component: {fileID: 8557244790579354069}
   - component: {fileID: 7936459487284803822}
+  - component: {fileID: 6221385438604788799}
   m_Layer: 0
   m_Name: PlayerAvatar (1)
   m_TagString: Untagged
@@ -465,12 +490,31 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &6221385438604788799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886217138575662891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db21fff0e2ba26b45a5c27a9967a2029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mats: {fileID: 8557244790579354069}
+  redmats: {fileID: 2100000, guid: f87d719a5212ad74db1c10cbfe518c6b, type: 2}
+  view: {fileID: 7936459487284803822}
+  red: 0
+  green: 0
+  blue: 0
+  aaa: {fileID: 6221385438604788799}
 --- !u!1 &5519074346965360640
 GameObject:
   m_ObjectHideFlags: 0
