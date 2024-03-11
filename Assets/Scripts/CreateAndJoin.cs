@@ -45,11 +45,30 @@ public class CreateAndJoin : MonoBehaviourPunCallbacks
     public void Reconnect(){
         PhotonNetwork.ReconnectAndRejoin();
     }
-    // public override void OnDisconnected(DisconnectCause cause)
+    // public override void OnJoinedLobby()
     // {
-    //     base.OnDisconnected(cause);
-    //     PhotonNetwork.ReconnectAndRejoin();
+    //     if(PhotonNetwork.IsConnected && PhotonNetwork.Server == ServerConnection.GameServer){
+    //         PhotonNetwork.LeaveRoom();
+    //         return;
+    //     }
+    //     if(!PhotonNetwork.IsConnected){
+    //         PhotonNetwork.ConnectUsingSettings();
+    //         return;
+    //     }
+    //     base.OnJoinedLobby();
     // }
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        // base.OnDisconnected(cause);
+        // if(PhotonNetwork.IsConnected && PhotonNetwork.Server == ServerConnection.GameServer){
+        //     PhotonNetwork.LeaveRoom();
+        //     return;
+        // }
+        // if(!PhotonNetwork.IsConnected){
+        //     PhotonNetwork.ConnectUsingSettings();
+        //     return;
+        // }
+    }
     // public override void OnJoinRoomFailed(short returnCode, string message)
     // {
     //     Debug.Log("Failed to Join Room");

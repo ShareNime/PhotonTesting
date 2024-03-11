@@ -150,6 +150,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: Room
+    methodName: JoinRoom
+  - assembly: Assembly-CSharp
     fullTypeName: CreateAndJoin
     methodName: CreateRoom
   - assembly: Assembly-CSharp
@@ -164,9 +167,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: CreateAndJoin
     methodName: MatchMaking
-  - assembly: Assembly-CSharp
-    fullTypeName: Room
-    methodName: JoinRoom
   - assembly: Assembly-CSharp
     fullTypeName: ConnectAndDisconnectScript
     methodName: LeaveRoom

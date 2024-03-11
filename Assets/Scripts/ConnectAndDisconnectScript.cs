@@ -64,7 +64,7 @@ public class ConnectAndDisconnectScript : MonoBehaviourPunCallbacks
         
         // PhotonNetwork.Reconnect();
 
-        // PhotonNetwork.LoadLevel("Loading");
+        PhotonNetwork.LoadLevel("Loading");
 
     }
     public override void OnPlayerEnteredRoom(Player newPlayer)

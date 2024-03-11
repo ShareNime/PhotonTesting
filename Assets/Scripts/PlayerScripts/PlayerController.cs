@@ -53,11 +53,8 @@ public class PlayerController : MonoBehaviour
             PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             MovePlayer();
-            MovePlayerCamera();
         }
-        
     }
-    
     private void MovePlayer(){
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput);
         if(Controller.isGrounded){
@@ -71,22 +68,6 @@ public class PlayerController : MonoBehaviour
         Controller.Move(currSpeed * Time.deltaTime * MoveVector);
         Controller.Move(Velocity * Time.deltaTime);
     }
-    private void MovePlayerCamera(){
-        // // Vector3 viewDir = transform.position - new Vector3(PlayerCamera.position.x, transform.position.y, PlayerCamera.position.z );
-        // Vector3 viewDir = transform.position - new Vector3(PlayerCamera.position.x, transform.position.y, PlayerCamera.position.z );
-        // followTransfrom.forward = viewDir.normalized;
-
-        // Vector3 inputDir = followTransfrom.forward * Input.GetAxis("Vertical") + followTransfrom.right * Input.GetAxis("Horizontal");
-        
-
-        // if(inputDir != Vector3.zero){
-        //     transform.forward = Vector3.Slerp(transform.forward, inputDir.normalized, Time.deltaTime * Sensitivity);
-        //     transform.forward = inputDir.normalized;
-        //     // PlayerCamera.Rotate(0,0,0);
-        // }
-        // // PlayerCamera.localEulerAngles = new Vector3(PlayerMouseInput.y, followTransfrom.position.y, followTransfrom.position.z);
-        // // transform.eulerAngles = new Vector3(transform.eulerAngles.x, PlayerMouseInput.x,transform.eulerAngles.z);
-    }
     private void OnTriggerStay(Collider other) {
         // if(PlayerInputView.IsMine){
 
@@ -97,7 +78,7 @@ public class PlayerController : MonoBehaviour
                     PlayerInputView.RPC("JointConnect",RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
                 // if(other.GetComponent<PhotonView>().Owner == PhotonNetwork.LocalPlayer){
                     Debug.Log("This Player ATtach joint");
-                    // other.attachedRigidbody.isKinematic = false;
+                    other.attachedRigidbody.isKinematic = false;
                     // PlayerInputView.RPC("JointConnect",RpcTarget.All); 
                 // }else{
                 //     other.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
@@ -106,7 +87,7 @@ public class PlayerController : MonoBehaviour
             }else{
                 // PlayerInputView.RPC("JoinDisconnect",RpcTarget.All,other);
                 PlayerInputView.RPC("JoinDisconnect",RpcTarget.All);
-                // other.attachedRigidbody.isKinematic = true;
+                other.attachedRigidbody.isKinematic = true;
                 currSpeed = Speed;
             }
         }
@@ -115,7 +96,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerExit(Collider other) {
         if(other.CompareTag("Grabable")){
-            // other.attachedRigidbody.isKinematic = true;
+            other.attachedRigidbody.isKinematic = true;
         }
         currSpeed = Speed;
         PlayerInputView.RPC("JoinDisconnect",RpcTarget.All);
