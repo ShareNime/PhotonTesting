@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 PlayerMouseInput;
     [SerializeField] private float currSpeed;
 
-    private float xRot;
     [SerializeField] private FixedJoint GrabJoint;
     [SerializeField] private Transform followTransfrom;
     [SerializeField] private CharacterController Controller;
@@ -31,13 +30,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PhotonView view;
     [SerializeField] private TMP_Text NickNameText;
     [SerializeField] private PhotonView PlayerInputView;
-    private bool IsConnected = false;
+    [SerializeField] GameObject AllGameObject;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;   
         NickNameText.text = view.Owner.NickName;
+        // NickNameText.text = "AAAA";
+
         currSpeed = Speed;
         if(!view.IsMine){
             PlayerCameraObject.SetActive(false);
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
             PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             MovePlayer();
+
         }
     }
     private void MovePlayer(){
@@ -68,45 +70,57 @@ public class PlayerController : MonoBehaviour
         Controller.Move(currSpeed * Time.deltaTime * MoveVector);
         Controller.Move(Velocity * Time.deltaTime);
     }
+    private void OnTriggerEnter(Collider other){
+        if(other.CompareTag("MovePlatform")){
+            PlayerInputView.RPC("AttachChild",RpcTarget.All,other.gameObject.GetPhotonView().ViewID);
+        }
+    }
     private void OnTriggerStay(Collider other) {
-        // if(PlayerInputView.IsMine){
-
-            if(other.CompareTag("Grabable")){
-
+        if(other.CompareTag("Grabable")){
             if(Input.GetKey(KeyCode.F)){
-                    // GrabJoint.connectedBody = other.attachedRigidbody;
-                    PlayerInputView.RPC("JointConnect",RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
-                // if(other.GetComponent<PhotonView>().Owner == PhotonNetwork.LocalPlayer){
-                    Debug.Log("This Player ATtach joint");
-                    other.attachedRigidbody.isKinematic = false;
-                    // PlayerInputView.RPC("JointConnect",RpcTarget.All); 
-                // }else{
-                //     other.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
-                // }
+                PlayerInputView.RPC("JointConnect",RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+                Debug.Log("This Player ATtach joint");
+                // other.attachedRigidbody.isKinematic = false;
                 currSpeed = GrabSpeed;
             }else{
-                // PlayerInputView.RPC("JoinDisconnect",RpcTarget.All,other);
-                PlayerInputView.RPC("JoinDisconnect",RpcTarget.All);
-                other.attachedRigidbody.isKinematic = true;
+                PlayerInputView.RPC("JoinDisconnect",RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+                // other.attachedRigidbody.isKinematic = true;
                 currSpeed = Speed;
             }
-        }
-        // }
-        
+        } 
     }
+
     private void OnTriggerExit(Collider other) {
+        if(other.CompareTag("MovePlatform")){
+            PlayerInputView.RPC("DetachChild",RpcTarget.All);
+        }
         if(other.CompareTag("Grabable")){
-            other.attachedRigidbody.isKinematic = true;
+            // other.attachedRigidbody.isKinematic = true;
+            PlayerInputView.RPC("JoinDisconnect",RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
         }
         currSpeed = Speed;
-        PlayerInputView.RPC("JoinDisconnect",RpcTarget.All);
     }
     [PunRPC]
     void JointConnect(int targetView){
+        PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>().isKinematic = false;
         GrabJoint.connectedBody = PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>();
+        
     }
+
     [PunRPC]
-    void JoinDisconnect(){
+    void JoinDisconnect(int targetView){
+        PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>().isKinematic = true;
+
         GrabJoint.connectedBody = null;
     }
+    
+    [PunRPC]
+    private void AttachChild(int targetView){
+        AllGameObject.transform.SetParent(PhotonView.Find(targetView).gameObject.transform);
+    }
+    [PunRPC]
+    private void DetachChild(){
+        AllGameObject.transform.SetParent(null);
+    }
+
 }
