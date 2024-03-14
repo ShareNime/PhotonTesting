@@ -54,7 +54,6 @@ public class PlayerController : MonoBehaviour
             PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             MovePlayer();
-
         }
     }
     private void MovePlayer(){
