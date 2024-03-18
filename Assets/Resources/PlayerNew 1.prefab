@@ -999,6 +999,7 @@ MonoBehaviour:
   SpawnPos: {x: 517.59, y: 1.18, z: 134.6}
   _playerInputGameObject: {fileID: 594612201343727390}
   _playerAvatarGameObject: {fileID: 1886217138575662891}
+  _deadCounter: 0
 --- !u!1 &6248991820334685549
 GameObject:
   m_ObjectHideFlags: 0

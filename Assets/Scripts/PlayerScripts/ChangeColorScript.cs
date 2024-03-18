@@ -19,7 +19,7 @@ public class ChangeColorScript : MonoBehaviourPunCallbacks
     [SerializeField]  ChangeColorScript aaa;
     private Color _color;
     public Player player;
-    private ExitGames.Client.Photon.Hashtable _myCustomProperties = new ExitGames.Client.Photon.Hashtable();
+    private ExitGames.Client.Photon.Hashtable _myColorCustomProperties = new ExitGames.Client.Photon.Hashtable();
 
     // Start is called before the first frame update
     private void Start() {
@@ -31,9 +31,10 @@ public class ChangeColorScript : MonoBehaviourPunCallbacks
             green = UnityEngine.Random.Range(0,226/255f);
             blue = UnityEngine.Random.Range(0,226/255f);
             rgb = new float[] {red,green,blue};
-            _myCustomProperties["RandomColor"] = rgb;
-            PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
-            Debug.Log("Color Generated = " + PhotonNetwork.LocalPlayer.CustomProperties["RandomColor"]);
+            _myColorCustomProperties["RandomColor"] = rgb;
+            // _myColorCustomProperties.Add("RandomColor", rgb);
+            // PhotonNetwork.LocalPlayer.SetCustomProperties(_myColorCustomProperties);
+            PhotonNetwork.LocalPlayer.CustomProperties = _myColorCustomProperties;
 
         }else{
             
@@ -41,9 +42,16 @@ public class ChangeColorScript : MonoBehaviourPunCallbacks
         }
             if(view.IsMine){
                 // _color = (Color)PhotonNetwork.LocalPlayer.CustomProperties["RandomColor"];
-                rgb = (float[]) PhotonNetwork.LocalPlayer.CustomProperties["RandomColor"];
-                view.RPC("ChangeColor", RpcTarget.AllBuffered, rgb[0],rgb[1],rgb[2]);
+                if(PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue("RandomColor", out object rgbColor)){
+                    rgb = (float[]) rgbColor;
+                    view.RPC("ChangeColor", RpcTarget.AllBuffered, rgb[0],rgb[1],rgb[2]);
+                }else{
+                    Debug.Log("Failed to Get Color");
+                }
+                // rgb = (float[]) PhotonNetwork.LocalPlayer.CustomProperties["RandomColor"];
             }
+            Debug.Log("Color Generated = " + PhotonNetwork.LocalPlayer.CustomProperties["RandomColor"]);
+
         }
     }
     [PunRPC]

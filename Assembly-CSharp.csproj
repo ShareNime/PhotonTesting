@@ -92,6 +92,7 @@
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\Highlighter.cs" />
     <Compile Include="Assets\Scripts\Level1PlayerSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
+    <Compile Include="Assets\Scripts\PlayerDeadCounterDisplay.cs" />
     <Compile Include="Assets\Scripts\LobbyPlayerSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCam.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\ThirdPersonController.cs" />

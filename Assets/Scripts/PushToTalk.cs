@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Voice.Unity;
 using Photon.Pun;
-public class PushToTalk : MonoBehaviour
+using Photon.Voice.PUN;
+using Photon.Realtime;
+public class PushToTalk : MonoBehaviourPunCallbacks
 {
     private Recorder _recorder;
     [SerializeField] private GameObject[] _micIndicatorGameobjects;
@@ -13,9 +15,14 @@ public class PushToTalk : MonoBehaviour
             _recorder = GetComponent<Recorder>();
         }
     }
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        Destroy(gameObject);
+        base.OnDisconnected(cause);
+    }
     // Start is called before the first frame update
-    void Start()
-    {        
+    void Start(){
+        
     }
     private void EnableTalking(){
         _recorder.TransmitEnabled = true;
@@ -37,5 +44,6 @@ public class PushToTalk : MonoBehaviour
         }
         Debug.Log("transmitEnabled = " + _recorder.TransmitEnabled);
         }
+        
     }
 }

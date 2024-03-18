@@ -11,12 +11,9 @@ public class UsernameScript : MonoBehaviour
     [SerializeField] TMP_Text MyUsername;
     // Start is called before the first frame update
     void Start()
-    {
-        Debug.Log(PhotonNetwork.NickName);
-        
+    {  
         if(PhotonNetwork.NickName != ""){
             MyUsername.text = PhotonNetwork.NickName;
-
             UsernamePanel.SetActive(false);
         }
     }

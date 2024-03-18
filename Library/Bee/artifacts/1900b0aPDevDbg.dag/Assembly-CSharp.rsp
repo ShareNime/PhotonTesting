@@ -388,6 +388,7 @@
 "Assets/Scripts/ObstacleScripts/MovingPlatform.cs"
 "Assets/Scripts/ObstacleScripts/ObstacleGiveDamageScript.cs"
 "Assets/Scripts/ObstacleScripts/Testing.cs"
+"Assets/Scripts/PlayerDeadCounterDisplay.cs"
 "Assets/Scripts/PlayerListItem.cs"
 "Assets/Scripts/PlayerListManager.cs"
 "Assets/Scripts/PlayerScripts/ChangeColorScript.cs"
