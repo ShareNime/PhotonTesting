@@ -7,7 +7,7 @@ public class GateOpen : MonoBehaviour
     [SerializeField] private int _triggerToOpen;
     [SerializeField] private FloorTrigger[] _floorTrigger;
     [SerializeField] private Material _material;
-    [SerializeField] private bool _isOpen = false;
+    public bool IsOpen = false;
     [SerializeField] private Vector3 _targetPos;
     [SerializeField] private float _speed = 10f;
     private Vector3 _startPos;
@@ -37,12 +37,11 @@ public class GateOpen : MonoBehaviour
     }
     private void OpenGate(){
         transform.position = Vector3.Lerp(transform.position, _targetPos, _speed * Time.deltaTime);
-
-        _isOpen = true;
+        IsOpen = true;
         _material.color = Color.black;
     }
     private void GateClose(){
-        _isOpen = false;
+        IsOpen = false;
         transform.position = Vector3.Lerp(transform.position, _startPos, _speed * Time.deltaTime);
         _material.color = Color.green;
     }

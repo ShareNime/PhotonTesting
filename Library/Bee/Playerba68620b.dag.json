@@ -551,7 +551,7 @@
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 16326,
+      "PayloadLength": 16278,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
@@ -657,30 +657,30 @@
         "D:/Unity/UnityEditor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll",
         "D:/Unity/UnityEditor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "D:/Unity/UnityEditor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.API.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.PUN.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Csg.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonChat.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Cinemachine.dll",
-        "D:/UnityProject/PhotonTesting/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll",
-        "D:/UnityProject/PhotonTesting/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
-        "D:/UnityProject/PhotonTesting/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.API.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.PUN.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Csg.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonChat.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Cinemachine.dll",
+        "D:/GithubRepo/PhotonTesting/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll",
+        "D:/GithubRepo/PhotonTesting/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
+        "D:/GithubRepo/PhotonTesting/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll",
         "D:/Unity/UnityEditor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.dll",
         "D:/Unity/UnityEditor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Mono.Security.dll",
         "D:/Unity/UnityEditor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ComponentModel.Composition.dll",
@@ -1622,7 +1622,7 @@
       "DisplayName": "Copying Assembly-CSharp.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Assembly-CSharp.dll"
@@ -1634,7 +1634,7 @@
       "DisplayName": "Copying Unity.ProBuilder.Stl.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.Stl.dll"
@@ -1646,7 +1646,7 @@
       "DisplayName": "Copying Unity.ProBuilder.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.dll"
@@ -1658,7 +1658,7 @@
       "DisplayName": "Copying PhotonVoice.API.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.API.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.API.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonVoice.API.dll"
@@ -1670,7 +1670,7 @@
       "DisplayName": "Copying PhotonVoice.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonVoice.dll"
@@ -1682,7 +1682,7 @@
       "DisplayName": "Copying Unity.VisualScripting.Core.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.VisualScripting.Core.dll"
@@ -1694,7 +1694,7 @@
       "DisplayName": "Copying PhotonVoice.PUN.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.PUN.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.PUN.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonVoice.PUN.dll"
@@ -1706,7 +1706,7 @@
       "DisplayName": "Copying UnityEngine.UI.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/UnityEngine.UI.dll"
@@ -1718,7 +1718,7 @@
       "DisplayName": "Copying Unity.ProBuilder.Csg.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Csg.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Csg.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.Csg.dll"
@@ -1730,7 +1730,7 @@
       "DisplayName": "Copying Unity.VisualScripting.Flow.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.VisualScripting.Flow.dll"
@@ -1738,26 +1738,26 @@
       "DebugActionIndex": 107
     },
     {
-      "Annotation": "CopyFiles D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonRealtime.dll",
-      "DisplayName": "Copying PhotonRealtime.dll",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll"
-      ],
-      "Outputs": [
-        "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonRealtime.dll"
-      ],
-      "DebugActionIndex": 108
-    },
-    {
       "Annotation": "CopyFiles D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonChat.dll",
       "DisplayName": "Copying PhotonChat.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonChat.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonChat.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonChat.dll"
+      ],
+      "DebugActionIndex": 108
+    },
+    {
+      "Annotation": "CopyFiles D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonRealtime.dll",
+      "DisplayName": "Copying PhotonRealtime.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.dll"
+      ],
+      "Outputs": [
+        "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonRealtime.dll"
       ],
       "DebugActionIndex": 109
     },
@@ -1766,7 +1766,7 @@
       "DisplayName": "Copying Unity.Timeline.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.Timeline.dll"
@@ -1778,7 +1778,7 @@
       "DisplayName": "Copying PhotonUnityNetworking.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonUnityNetworking.dll"
@@ -1790,7 +1790,7 @@
       "DisplayName": "Copying Unity.ProBuilder.Poly2Tri.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.Poly2Tri.dll"
@@ -1802,7 +1802,7 @@
       "DisplayName": "Copying Unity.ProBuilder.KdTree.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.KdTree.dll"
@@ -1814,7 +1814,7 @@
       "DisplayName": "Copying PhotonUnityNetworking.Demos.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonUnityNetworking.Demos.dll"
@@ -1826,7 +1826,7 @@
       "DisplayName": "Copying PhotonUnityNetworking.Utilities.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonUnityNetworking.Utilities.dll"
@@ -1838,7 +1838,7 @@
       "DisplayName": "Copying Unity.TextMeshPro.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.TextMeshPro.dll"
@@ -1850,7 +1850,7 @@
       "DisplayName": "Copying Unity.VisualScripting.State.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.VisualScripting.State.dll"
@@ -1862,7 +1862,7 @@
       "DisplayName": "Copying Cinemachine.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Cinemachine.dll"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Cinemachine.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Cinemachine.dll"
@@ -1874,7 +1874,7 @@
       "DisplayName": "Copying websocket-sharp.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll"
+        "D:/GithubRepo/PhotonTesting/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/websocket-sharp.dll"
@@ -1886,7 +1886,7 @@
       "DisplayName": "Copying Unity.VisualScripting.Antlr3.Runtime.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+        "D:/GithubRepo/PhotonTesting/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll"
@@ -1898,7 +1898,7 @@
       "DisplayName": "Copying Photon3Unity3D.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll"
+        "D:/GithubRepo/PhotonTesting/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Photon3Unity3D.dll"
@@ -2978,7 +2978,7 @@
       "DisplayName": "Copying Assembly-CSharp.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Assembly-CSharp.pdb"
@@ -2990,7 +2990,7 @@
       "DisplayName": "Copying Unity.ProBuilder.Stl.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.Stl.pdb"
@@ -3002,7 +3002,7 @@
       "DisplayName": "Copying Unity.ProBuilder.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.pdb"
@@ -3014,7 +3014,7 @@
       "DisplayName": "Copying PhotonVoice.API.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.API.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.API.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonVoice.API.pdb"
@@ -3026,7 +3026,7 @@
       "DisplayName": "Copying PhotonVoice.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonVoice.pdb"
@@ -3038,7 +3038,7 @@
       "DisplayName": "Copying Unity.VisualScripting.Core.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.VisualScripting.Core.pdb"
@@ -3050,7 +3050,7 @@
       "DisplayName": "Copying PhotonVoice.PUN.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.PUN.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.PUN.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonVoice.PUN.pdb"
@@ -3062,7 +3062,7 @@
       "DisplayName": "Copying UnityEngine.UI.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/UnityEngine.UI.pdb"
@@ -3074,7 +3074,7 @@
       "DisplayName": "Copying Unity.ProBuilder.Csg.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Csg.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Csg.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.Csg.pdb"
@@ -3086,7 +3086,7 @@
       "DisplayName": "Copying Unity.VisualScripting.Flow.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.VisualScripting.Flow.pdb"
@@ -3094,26 +3094,26 @@
       "DebugActionIndex": 220
     },
     {
-      "Annotation": "CopyFiles D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonRealtime.pdb",
-      "DisplayName": "Copying PhotonRealtime.pdb",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.pdb"
-      ],
-      "Outputs": [
-        "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonRealtime.pdb"
-      ],
-      "DebugActionIndex": 221
-    },
-    {
       "Annotation": "CopyFiles D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonChat.pdb",
       "DisplayName": "Copying PhotonChat.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonChat.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonChat.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonChat.pdb"
+      ],
+      "DebugActionIndex": 221
+    },
+    {
+      "Annotation": "CopyFiles D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonRealtime.pdb",
+      "DisplayName": "Copying PhotonRealtime.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.pdb"
+      ],
+      "Outputs": [
+        "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonRealtime.pdb"
       ],
       "DebugActionIndex": 222
     },
@@ -3122,7 +3122,7 @@
       "DisplayName": "Copying Unity.Timeline.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.Timeline.pdb"
@@ -3134,7 +3134,7 @@
       "DisplayName": "Copying PhotonUnityNetworking.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonUnityNetworking.pdb"
@@ -3146,7 +3146,7 @@
       "DisplayName": "Copying Unity.ProBuilder.Poly2Tri.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.Poly2Tri.pdb"
@@ -3158,7 +3158,7 @@
       "DisplayName": "Copying Unity.ProBuilder.KdTree.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.ProBuilder.KdTree.pdb"
@@ -3170,7 +3170,7 @@
       "DisplayName": "Copying PhotonUnityNetworking.Demos.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonUnityNetworking.Demos.pdb"
@@ -3182,7 +3182,7 @@
       "DisplayName": "Copying PhotonUnityNetworking.Utilities.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/PhotonUnityNetworking.Utilities.pdb"
@@ -3194,7 +3194,7 @@
       "DisplayName": "Copying Unity.TextMeshPro.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.TextMeshPro.pdb"
@@ -3206,7 +3206,7 @@
       "DisplayName": "Copying Unity.VisualScripting.State.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Unity.VisualScripting.State.pdb"
@@ -3218,7 +3218,7 @@
       "DisplayName": "Copying Cinemachine.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Cinemachine.pdb"
+        "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Cinemachine.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Cinemachine.pdb"
@@ -3230,7 +3230,7 @@
       "DisplayName": "Copying Photon3Unity3D.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "D:/UnityProject/PhotonTesting/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.pdb"
+        "D:/GithubRepo/PhotonTesting/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.pdb"
       ],
       "Outputs": [
         "D:/UnityBuild/1/PhotonTesting_Data/Managed/Photon3Unity3D.pdb"
@@ -3241,7 +3241,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 16498,
+      "PayloadOffset": 16450,
       "PayloadLength": 28,
       "PayloadDebugContentSnippet": "DefaultCompany\nPhotonTesting",
       "Inputs": [],
@@ -3959,6 +3959,78 @@
       "File": "Assets/Photon/PhotonVoice/PhotonVoiceLibs/x86_64/webrtc-audio.dll"
     },
     {
+      "File": "D:/GithubRepo/PhotonTesting/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Cinemachine.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonChat.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.API.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.PUN.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Csg.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
+    },
+    {
+      "File": "D:/GithubRepo/PhotonTesting/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.pdb"
+    },
+    {
       "File": "D:/Unity/UnityEditor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.pdb"
     },
     {
@@ -4244,78 +4316,6 @@
       "File": "D:/UnityBuild/1/UnityCommon.props"
     },
     {
-      "File": "D:/UnityProject/PhotonTesting/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Cinemachine.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonChat.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonRealtime.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Demos.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonUnityNetworking.Utilities.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.API.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/PhotonVoice.PUN.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Csg.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.KdTree.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Poly2Tri.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.ProBuilder.Stl.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
-    },
-    {
-      "File": "D:/UnityProject/PhotonTesting/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.pdb"
-    },
-    {
       "File": "Library/Bee/Playerba68620b-inputdata.json"
     }
   ],
@@ -4386,6 +4386,6 @@
   "SharedResources": [],
   "Scanners": [],
   "Identifier": "Library/Bee/Playerba68620b.dag.json",
-  "PayloadsFile": "D:/UnityProject/PhotonTesting/Library/Bee/Playerba68620b.dag.payloads",
+  "PayloadsFile": "D:/GithubRepo/PhotonTesting/Library/Bee/Playerba68620b.dag.payloads",
   "RelativePathToRoot": "../.."
 }

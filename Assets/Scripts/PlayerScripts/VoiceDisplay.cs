@@ -11,7 +11,7 @@ public class VoiceDisplay : MonoBehaviour
 {
     [SerializeField] private PhotonView _pv;
     [SerializeField] private PhotonVoiceView _pvv;
-    [SerializeField] private GameObject _voiceIndicator;
+    [SerializeField] private GameObject _voiceIndicatorGameobject;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class VoiceDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _voiceIndicator.SetActive(this._pvv.IsSpeaking);
+        _voiceIndicatorGameobject.SetActive(this._pvv.IsSpeaking);
         // if(this._pvv.IsSpeaking){
         //     _voiceIndicator.SetActive(true);
         // }else{

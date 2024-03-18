@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\RemoteSpeakerUI.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerDieScript.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceProximityChat\Scripts\PointersController.cs" />
     <Compile Include="Assets\Scripts\ObjectMoveTest.cs" />
     <Compile Include="Assets\Scripts\LobbyPortalScript.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
     <Compile Include="Assets\Scripts\ConnectToServer.cs" />
     <Compile Include="Assets\Scripts\PlayerListManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Push.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\CharacterInstantiation.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\DemoVoiceUI.cs" />
     <Compile Include="Assets\Scripts\RoomList.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCam.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\Scripts\UILookAtCamera.cs" />
+    <Compile Include="Assets\Scripts\ObstacleScripts\ObstacleGiveDamageScript.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
     <Compile Include="Assets\Scripts\Room.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
@@ -103,9 +106,9 @@
     <Compile Include="Assets\Scripts\PlayerListItem.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceProximityChat\Scripts\ProximityVoiceTrigger.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\VoiceDemoUI.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\UsernameScript.cs" />
     <Compile Include="Assets\Scripts\ObstacleScripts\MovingPlatform.cs" />
-    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\ObstacleScripts\FloorTrigger.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\MouseLookHelper.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\FirstPersonController.cs" />
@@ -1108,12 +1111,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
@@ -1154,9 +1157,9 @@
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj" />
     <ProjectReference Include="PhotonVoice.PUN.csproj" />
     <ProjectReference Include="MicAmplifierEditor.Editor.csproj" />
-    <ProjectReference Include="PhotonRealtime.csproj" />
-    <ProjectReference Include="PhotonChat.csproj" />
     <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj" />
+    <ProjectReference Include="PhotonChat.csproj" />
+    <ProjectReference Include="PhotonRealtime.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj" />
     <ProjectReference Include="PhotonVoice.PUN.Editor.csproj" />

@@ -1052,12 +1052,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
@@ -1099,9 +1099,9 @@
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj" />
     <ProjectReference Include="PhotonVoice.PUN.csproj" />
     <ProjectReference Include="MicAmplifierEditor.Editor.csproj" />
-    <ProjectReference Include="PhotonRealtime.csproj" />
-    <ProjectReference Include="PhotonChat.csproj" />
     <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj" />
+    <ProjectReference Include="PhotonChat.csproj" />
+    <ProjectReference Include="PhotonRealtime.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.csproj" />
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj" />
     <ProjectReference Include="PhotonVoice.PUN.Editor.csproj" />

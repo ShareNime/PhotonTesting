@@ -6,6 +6,8 @@ using Photon.Pun;
 public class PushToTalk : MonoBehaviour
 {
     private Recorder _recorder;
+    [SerializeField] private GameObject[] _micIndicatorGameobjects;
+
     private void Awake() {
         if(_recorder == null){
             _recorder = GetComponent<Recorder>();
@@ -13,8 +15,7 @@ public class PushToTalk : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {        
     }
     private void EnableTalking(){
         _recorder.TransmitEnabled = true;
@@ -25,10 +26,16 @@ public class PushToTalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.G)){
-            EnableTalking();
-        }else if(Input.GetKeyUp(KeyCode.G)){
-            DisableTalking();
+        if(Input.GetKeyDown(KeyCode.G)){
+        _recorder.TransmitEnabled = !_recorder.TransmitEnabled;
+        if(_recorder.TransmitEnabled){
+            _micIndicatorGameobjects[0].SetActive(true);
+            _micIndicatorGameobjects[1].SetActive(false);
+        }else{
+            _micIndicatorGameobjects[1].SetActive(true);
+            _micIndicatorGameobjects[0].SetActive(false);
+        }
+        Debug.Log("transmitEnabled = " + _recorder.TransmitEnabled);
         }
     }
 }

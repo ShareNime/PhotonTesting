@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grabable
   - MovePlatform
+  - DamageDeal
   layers:
   - Default
   - TransparentFX
