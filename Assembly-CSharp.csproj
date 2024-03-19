@@ -80,6 +80,7 @@
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\CharacterInstantiation.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\DemoVoiceUI.cs" />
     <Compile Include="Assets\Scripts\RoomList.cs" />
+    <Compile Include="Assets\Scripts\ObstacleScripts\RollingBallSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Scripts\ObstacleScripts\GateOpen.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\ConnectAndDisconnectScript.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\Highlighter.cs" />
+    <Compile Include="Assets\Scripts\ObstacleScripts\BallRolling.cs" />
     <Compile Include="Assets\Scripts\Level1PlayerSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\PlayerDeadCounterDisplay.cs" />

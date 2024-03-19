@@ -16,7 +16,7 @@ ScriptsOnlyBuild:
     - UILookAtCamera
     - VoiceDisplay
     Assembly-CSharp.dll:
-    - ChangeColorScript
+    - BallRolling
     - ConnectAndDisconnectScript
     - ConnectToServer
     - CreateAndJoin
@@ -26,18 +26,14 @@ ScriptsOnlyBuild:
     - LobbyPortalScript
     - MovingPlatform
     - ObstacleGiveDamageScript
-    - PlayerCam
-    - PlayerController
-    - PlayerDieScript
     - PlayerListItem
     - PlayerListManager
     - PushToTalk
+    - RollingBallSpawner
     - Room
     - RoomList
     - Testing
-    - UILookAtCamera
     - UsernameScript
-    - VoiceDisplay
     Cinemachine:
     - Cinemachine.Cinemachine3rdPersonFollow
     - Cinemachine.CinemachineComposer
@@ -47,11 +43,7 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
     Cinemachine.dll:
-    - Cinemachine.Cinemachine3rdPersonFollow
     - Cinemachine.CinemachineBrain
-    - Cinemachine.CinemachineHardLookAt
-    - Cinemachine.CinemachinePipeline
-    - Cinemachine.CinemachineVirtualCamera
     PhotonUnityNetworking:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -69,6 +61,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.Utilities:
     - Photon.Pun.UtilityScripts.MoveByKeys
     PhotonUnityNetworking.dll:
@@ -82,12 +76,17 @@ ScriptsOnlyBuild:
     PhotonVoice.PUN:
     - Photon.Voice.PUN.PhotonVoiceView
     PhotonVoice.PUN.dll:
-    - Photon.Voice.PUN.PhotonVoiceView
     - Photon.Voice.PUN.PunVoiceClient
     PhotonVoice.dll:
     - Photon.Voice.Unity.Recorder
-    - Photon.Voice.Unity.Speaker
     - Photon.Voice.Unity.VoiceLogger
+    Unity.ProBuilder.Editor.dll:
+    - UnityEditor.ProBuilder.PositionToolContext
+    - UnityEditor.ProBuilder.ProBuilderEditor
+    - UnityEditor.ProBuilder.ProBuilderShapeEditor
+    - UnityEditor.ProBuilder.ProbuilderMoveTool
+    - UnityEditor.ProBuilder.ProbuilderRotateTool
+    - UnityEditor.ProBuilder.ProbuilderScaleTool
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -408,9 +407,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8214}
     - Class: 114
       Script: {instanceID: 8822}
+    - Class: 114
+      Script: {instanceID: 27924}
+    - Class: 114
+      Script: {instanceID: 44678}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 154
       Script: {instanceID: 0}
@@ -429,6 +434,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 850595691
       Script: {instanceID: 0}
     Assets/Scenes/Loading.unity:
     - Class: 1
@@ -3179,6 +3186,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 46daf198e548b9c83fe683f9e8d3897e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BallRolling
+  - hash:
+      serializedVersion: 2
+      Hash: cfe6384b844c73914a3cb0dccb74bc14
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RollingBallSpawner
   platform: 19
   scenePathNames:
   - Assets/Scenes/Loading.unity
