@@ -11,9 +11,11 @@ public class PlayerListManager : MonoBehaviourPunCallbacks
     [SerializeField] Transform playerListContent;
 
     private List<GameObject> PlayerListPrefabsInstantiate;
-    private void Start() {
+    private void Start()
+    {
         Player[] players = PhotonNetwork.PlayerList;
-        for(int i = 0; i < players.Count(); i++){
+        for (int i = 0; i < players.Count(); i++)
+        {
             Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
         }
     }
@@ -21,7 +23,8 @@ public class PlayerListManager : MonoBehaviourPunCallbacks
     {
         Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
     }
-    private void Update() {
-        
+    private void Update()
+    {
+
     }
 }

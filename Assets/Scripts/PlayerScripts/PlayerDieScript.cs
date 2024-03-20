@@ -25,63 +25,72 @@ public class PlayerDieScript : MonoBehaviourPunCallbacks
         _timeToRespawnCounter = _timeToRespawn;
         if (PhotonNetwork.IsConnected && PhotonNetwork.InRoom)
         {
-            if(!PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("DeadCounter")){
+            if (!PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("DeadCounter"))
+            {
                 _deadCounter = 0;
                 // _myCustomProperties["DeadCounter"] = _deadCounter;
                 // _myCustomProperties["DeadCounter"] = _deadCounter;
-                _myCustomProperties.Add("DeadCounter",_deadCounter);
+                _myCustomProperties.Add("DeadCounter", _deadCounter);
                 PhotonNetwork.LocalPlayer.SetCustomProperties(_myCustomProperties);
                 // PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
-            }else{
-                _deadCounter = (int) PhotonNetwork.LocalPlayer.CustomProperties["DeadCounter"];
+            }
+            else
+            {
+                _deadCounter = (int)PhotonNetwork.LocalPlayer.CustomProperties["DeadCounter"];
                 Debug.Log("DeadCounter Has Been Generated");
             }
         }
-                Debug.Log("DeadCounter Generated = " + PhotonNetwork.LocalPlayer.CustomProperties["DeadCounter"]);
-
+        Debug.Log("DeadCounter Generated = " + PhotonNetwork.LocalPlayer.CustomProperties["DeadCounter"]);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(view.IsMine){
-            if(CurrPlayerHealth <= 0){
+        if (view.IsMine)
+        {
+            if (CurrPlayerHealth <= 0)
+            {
                 Debug.Log("Player Die");
-                view.RPC("PlayerDie",RpcTarget.All);
-                view.RPC("AddDieCounter",view.Owner);
+                view.RPC("PlayerDie", RpcTarget.All);
+                view.RPC("AddDieCounter", view.Owner);
             }
-            if(_isDead){
+            if (_isDead)
+            {
                 _timeToRespawnCounter -= Time.deltaTime;
-            }   
-            if(_timeToRespawnCounter <= 0){
+            }
+            if (_timeToRespawnCounter <= 0)
+            {
                 view.RPC("PlayerRespawn", RpcTarget.All);
             }
         }
     }
     [PunRPC]
-    void PlayerDie(){
+    void PlayerDie()
+    {
         _isDead = true;
         _playerInputGameObject.SetActive(false);
         _playerAvatarGameObject.SetActive(false);
-       
+
         // ("DeadCounter",_deadCounter);
-        
+
         // _myCustomProperties["DeadCounter"] = _deadCounter;
         // PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
-        Debug.Log(view.Owner.NickName + " Dead is " + (int) PhotonNetwork.LocalPlayer.CustomProperties["DeadCounter"]);
+        Debug.Log(view.Owner.NickName + " Dead is " + (int)PhotonNetwork.LocalPlayer.CustomProperties["DeadCounter"]);
         CurrPlayerHealth = PlayerMaxHealth;
     }
     [PunRPC]
-    void AddDieCounter(){
+    void AddDieCounter()
+    {
         _deadCounter++;
         _myCustomProperties["DeadCounter"] = _deadCounter;
         // PhotonNetwork.LocalPlayer.CustomProperties = _myCustomProperties;
         PhotonNetwork.LocalPlayer.SetCustomProperties(_myCustomProperties);
     }
     [PunRPC]
-    void PlayerRespawn(){
+    void PlayerRespawn()
+    {
         _isDead = false;
-        
+
         _playerInputGameObject.SetActive(true);
         _playerAvatarGameObject.SetActive(true);
         _timeToRespawnCounter = _timeToRespawn;

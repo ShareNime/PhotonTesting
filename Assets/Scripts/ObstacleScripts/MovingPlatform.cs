@@ -13,7 +13,7 @@ public class MovingPlatform : MonoBehaviour
     private PhotonView view;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,36 +21,46 @@ public class MovingPlatform : MonoBehaviour
     {
         MovePlatform();
     }
-    private void MovePlatform(){
+    private void MovePlatform()
+    {
         _distanceToTarget = Vector3.Distance(transform.position, _waypoints[_currentTargetIndex]);
-        if(_distanceToTarget < 0.1){
+        if (_distanceToTarget < 0.1)
+        {
             _currentTargetIndex++;
-            if(_currentTargetIndex >= _waypoints.Length){
+            if (_currentTargetIndex >= _waypoints.Length)
+            {
                 _currentTargetIndex = 0;
             }
         }
-        else{
+        else
+        {
             transform.position = Vector3.MoveTowards(transform.position, _waypoints[_currentTargetIndex], _moveSpeed * Time.deltaTime);
         }
     }
-    private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.CompareTag("Player")){
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
             // other.transform.SetParent(transform);
             // view.RPC("AttachChild",RpcTarget.All,other.gameObject.GetPhotonView().ViewID);
         }
     }
-    private void OnTriggerExit(Collider other) {
-        if(other.gameObject.CompareTag("Player")){
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
             // other.transform.SetParent(null);
             // view.RPC("DetachChild",RpcTarget.All,other.gameObject.GetPhotonView().ViewID);
         }
     }
     [PunRPC]
-    private void AttachChild(int targetView){
+    private void AttachChild(int targetView)
+    {
         PhotonView.Find(targetView).gameObject.transform.SetParent(transform);
     }
     [PunRPC]
-    private void DetachChild(int targetView){
+    private void DetachChild(int targetView)
+    {
         PhotonView.Find(targetView).gameObject.transform.SetParent(null);
     }
 }

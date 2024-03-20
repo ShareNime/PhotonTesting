@@ -14,29 +14,35 @@ public class ConnectAndDisconnectScript : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.J)){
+        if (Input.GetKeyDown(KeyCode.J))
+        {
             // DisconnectPlayer();
             Cursor.lockState = CursorLockMode.None;
             PhotonNetwork.Disconnect();
         }
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             isMenuOpen = !isMenuOpen;
-            if(isMenuOpen){
+            if (isMenuOpen)
+            {
                 MenuPanel.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
-            }else{
+            }
+            else
+            {
                 MenuPanel.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
             }
         }
     }
-    public void LeaveRoom(){
+    public void LeaveRoom()
+    {
         Debug.Log("KELUAR WOI");
         PhotonNetwork.LeaveRoom();
     }
@@ -58,10 +64,10 @@ public class ConnectAndDisconnectScript : MonoBehaviourPunCallbacks
     // }
     public override void OnDisconnected(DisconnectCause cause)
     {
-        
+
         base.OnDisconnected(cause);
         Debug.LogWarning("You have been disconnected");
-        
+
         // PhotonNetwork.Reconnect();
 
         PhotonNetwork.LoadLevel("Loading");

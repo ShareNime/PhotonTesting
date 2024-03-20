@@ -2070,7 +2070,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 343970065}
+  m_Mesh: {fileID: 1430087084}
 --- !u!33 &211119640
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -3270,7 +3270,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1436371163}
+  m_Mesh: {fileID: 116126545}
 --- !u!33 &294311131
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -4382,7 +4382,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1565537391}
+  m_Mesh: {fileID: 1608273922}
 --- !u!33 &348928174
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -23292,6 +23292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1475578667}
   - component: {fileID: 1475578666}
+  - component: {fileID: 1475578668}
   m_Layer: 0
   m_Name: RollingBallManager
   m_TagString: Untagged
@@ -23319,6 +23320,7 @@ MonoBehaviour:
   _spawnTime: 3
   _spawnTimeCounter: 0
   _rollingBallObject: {fileID: 1240878473140150059, guid: 4e0449ecc4aaa3745bb9da11cce3f0f4, type: 3}
+  _view: {fileID: 1475578668}
 --- !u!4 &1475578667
 Transform:
   m_ObjectHideFlags: 0
@@ -23338,6 +23340,28 @@ Transform:
   - {fileID: 1325274044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1475578668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475578665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 9
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1512134107
 GameObject:
   m_ObjectHideFlags: 0
@@ -32656,7 +32680,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1939257205}
+  m_Mesh: {fileID: 1270507134}
 --- !u!33 &1911044958
 MeshFilter:
   m_ObjectHideFlags: 10

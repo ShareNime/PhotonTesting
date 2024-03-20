@@ -20,27 +20,37 @@ public class GateOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_triggerToOpen == 1){
-            if(_floorTrigger[0].IsTriggered){
+        if (_triggerToOpen == 1)
+        {
+            if (_floorTrigger[0].IsTriggered)
+            {
                 OpenGate();
-            }else{
+            }
+            else
+            {
                 // GateClose();
             }
         }
-        if(_triggerToOpen == 2){
-            if(_floorTrigger[0].IsTriggered && _floorTrigger[1].IsTriggered){
+        if (_triggerToOpen == 2)
+        {
+            if (_floorTrigger[0].IsTriggered && _floorTrigger[1].IsTriggered)
+            {
                 OpenGate();
-            }else{
+            }
+            else
+            {
                 // GateClose();
             }
         }
     }
-    private void OpenGate(){
+    private void OpenGate()
+    {
         transform.position = Vector3.Lerp(transform.position, _targetPos, _speed * Time.deltaTime);
         IsOpen = true;
         _material.color = Color.black;
     }
-    private void GateClose(){
+    private void GateClose()
+    {
         IsOpen = false;
         transform.position = Vector3.Lerp(transform.position, _startPos, _speed * Time.deltaTime);
         _material.color = Color.green;

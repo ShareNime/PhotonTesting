@@ -16,9 +16,9 @@ public class VoiceDisplay : MonoBehaviour
     void Start()
     {
         Player[] players = PhotonNetwork.PlayerList;
-        
+
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +30,6 @@ public class VoiceDisplay : MonoBehaviour
 
         //     // Debug.Log(PhotonNetwork.LocalPlayer.NickName + "is not Speaking");
         // }
-        
+
     }
 }

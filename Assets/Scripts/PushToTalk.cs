@@ -5,45 +5,51 @@ using Photon.Voice.Unity;
 using Photon.Pun;
 using Photon.Voice.PUN;
 using Photon.Realtime;
+using Unity.VisualScripting;
 public class PushToTalk : MonoBehaviourPunCallbacks
 {
     private Recorder _recorder;
     [SerializeField] private GameObject[] _micIndicatorGameobjects;
 
-    private void Awake() {
-        if(_recorder == null){
+    public static PushToTalk instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
             _recorder = GetComponent<Recorder>();
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(this);
     }
-    public override void OnDisconnected(DisconnectCause cause)
+    private void EnableTalking()
     {
-        Destroy(gameObject);
-        base.OnDisconnected(cause);
-    }
-    // Start is called before the first frame update
-    void Start(){
-        
-    }
-    private void EnableTalking(){
         _recorder.TransmitEnabled = true;
     }
-    private void DisableTalking(){
+    private void DisableTalking()
+    {
         _recorder.TransmitEnabled = false;
     }
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.G)){
-        _recorder.TransmitEnabled = !_recorder.TransmitEnabled;
-        if(_recorder.TransmitEnabled){
-            _micIndicatorGameobjects[0].SetActive(true);
-            _micIndicatorGameobjects[1].SetActive(false);
-        }else{
-            _micIndicatorGameobjects[1].SetActive(true);
-            _micIndicatorGameobjects[0].SetActive(false);
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            _recorder.TransmitEnabled = !_recorder.TransmitEnabled;
+            if (_recorder.TransmitEnabled)
+            {
+                _micIndicatorGameobjects[0].SetActive(true);
+                _micIndicatorGameobjects[1].SetActive(false);
+            }
+            else
+            {
+                _micIndicatorGameobjects[1].SetActive(true);
+                _micIndicatorGameobjects[0].SetActive(false);
+            }
+            Debug.Log("transmitEnabled = " + _recorder.TransmitEnabled);
         }
-        Debug.Log("transmitEnabled = " + _recorder.TransmitEnabled);
-        }
-        
     }
 }

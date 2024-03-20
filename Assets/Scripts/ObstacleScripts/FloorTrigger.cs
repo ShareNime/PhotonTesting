@@ -9,24 +9,29 @@ public class FloorTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    private void OnTriggerStay(Collider other) {
-        if(other.CompareTag("Player")){
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
             IsTriggered = true;
-            if(TriggeredGate.IsOpen){
+            if (TriggeredGate.IsOpen)
+            {
                 other.gameObject.GetComponent<PlayerDieScript>().SpawnPos = gameObject.transform.position;
             }
         }
     }
-    private void OnTriggerExit(Collider other) {
-        if(other.CompareTag("Player")){
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
             IsTriggered = false;
         }
     }

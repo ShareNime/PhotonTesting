@@ -35,12 +35,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;   
+        Cursor.lockState = CursorLockMode.Locked;
         NickNameText.text = view.Owner.NickName;
         // NickNameText.text = "AAAA";
 
         currSpeed = Speed;
-        if(!view.IsMine){
+        if (!view.IsMine)
+        {
             PlayerCameraObject.SetActive(false);
             gameObject.SetActive(false);
             PlayerCamera.enabled = false;
@@ -50,75 +51,95 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(view.IsMine){
+        if (view.IsMine)
+        {
             PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             MovePlayer();
         }
     }
-    private void MovePlayer(){
+    private void MovePlayer()
+    {
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput);
-        if(Controller.isGrounded){
+        if (Controller.isGrounded)
+        {
             Velocity.y = -1f;
-            if(Input.GetKeyDown(KeyCode.Space)){
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
                 Velocity.y = Jumpforce;
             }
-        }else{
+        }
+        else
+        {
             Velocity.y -= Gravity * -2f * Time.deltaTime;
         }
         Controller.Move(currSpeed * Time.deltaTime * MoveVector);
         Controller.Move(Velocity * Time.deltaTime);
     }
-    private void OnTriggerEnter(Collider other){
-        if(other.CompareTag("MovePlatform")){
-            PlayerInputView.RPC("AttachChild",RpcTarget.All,other.gameObject.GetPhotonView().ViewID);
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("MovePlatform"))
+        {
+            PlayerInputView.RPC("AttachChild", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
         }
     }
-    private void OnTriggerStay(Collider other) {
-        if(other.CompareTag("Grabable")){
-            if(Input.GetKey(KeyCode.F)){
-                PlayerInputView.RPC("JointConnect",RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Grabable"))
+        {
+            if (Input.GetKey(KeyCode.F))
+            {
+                PlayerInputView.RPC("JointConnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
                 Debug.Log("This Player ATtach joint");
                 // other.attachedRigidbody.isKinematic = false;
                 currSpeed = GrabSpeed;
-            }else{
-                PlayerInputView.RPC("JoinDisconnect",RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+            }
+            else
+            {
+                PlayerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
                 // other.attachedRigidbody.isKinematic = true;
                 currSpeed = Speed;
             }
-        } 
+        }
     }
 
-    private void OnTriggerExit(Collider other) {
-        if(other.CompareTag("MovePlatform")){
-            PlayerInputView.RPC("DetachChild",RpcTarget.All);
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("MovePlatform"))
+        {
+            PlayerInputView.RPC("DetachChild", RpcTarget.All);
         }
-        if(other.CompareTag("Grabable")){
+        if (other.CompareTag("Grabable"))
+        {
             // other.attachedRigidbody.isKinematic = true;
-            PlayerInputView.RPC("JoinDisconnect",RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+            PlayerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
         }
         currSpeed = Speed;
     }
     [PunRPC]
-    void JointConnect(int targetView){
+    void JointConnect(int targetView)
+    {
         PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>().isKinematic = false;
         GrabJoint.connectedBody = PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>();
-        
+
     }
 
     [PunRPC]
-    void JoinDisconnect(int targetView){
+    void JoinDisconnect(int targetView)
+    {
         PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
         GrabJoint.connectedBody = null;
     }
-    
+
     [PunRPC]
-    private void AttachChild(int targetView){
+    private void AttachChild(int targetView)
+    {
         AllGameObject.transform.SetParent(PhotonView.Find(targetView).gameObject.transform);
     }
     [PunRPC]
-    private void DetachChild(){
+    private void DetachChild()
+    {
         AllGameObject.transform.SetParent(null);
     }
 
