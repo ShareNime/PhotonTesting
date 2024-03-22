@@ -6,11 +6,12 @@ using Photon.Pun;
 using Photon.Voice.PUN;
 using Photon.Realtime;
 using Unity.VisualScripting;
+using Photon.Voice;
 public class PushToTalk : MonoBehaviourPunCallbacks
 {
     private Recorder _recorder;
     [SerializeField] private GameObject[] _micIndicatorGameobjects;
-
+    [SerializeField] private bool _micButtonPressed = false;
     public static PushToTalk instance;
     private void Awake()
     {
@@ -51,5 +52,23 @@ public class PushToTalk : MonoBehaviourPunCallbacks
             }
             Debug.Log("transmitEnabled = " + _recorder.TransmitEnabled);
         }
+    }
+    public void MicButtonClicked()
+    {
+        _recorder.TransmitEnabled = !_recorder.TransmitEnabled;
+        if (_recorder.TransmitEnabled)
+        {
+            _micIndicatorGameobjects[0].SetActive(true);
+            _micIndicatorGameobjects[1].SetActive(false);
+        }
+        else
+        {
+            _micIndicatorGameobjects[1].SetActive(true);
+            _micIndicatorGameobjects[0].SetActive(false);
+        }
+    }
+    public void MicButtonNotPressed()
+    {
+        _micButtonPressed = false;
     }
 }

@@ -30,6 +30,5 @@ public class VoiceDisplay : MonoBehaviour
 
         //     // Debug.Log(PhotonNetwork.LocalPlayer.NickName + "is not Speaking");
         // }
-
     }
 }

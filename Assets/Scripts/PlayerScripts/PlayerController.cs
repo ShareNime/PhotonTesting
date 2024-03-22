@@ -10,11 +10,16 @@ using Photon.Pun;
 using System.Diagnostics.Tracing;
 using Unity.VisualScripting;
 using TMPro;
+using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
+using Photon.Voice;
 public class PlayerController : MonoBehaviour
 {
     private Vector3 Velocity;
     private Vector3 PlayerMovementInput;
     private Vector2 PlayerMouseInput;
+    [SerializeField] private bool _interactButtonHoldedVar = false;
+    [SerializeField] private bool _jumpButtonPressed = false;
     [SerializeField] private float currSpeed;
 
     [SerializeField] private FixedJoint GrabJoint;
@@ -31,14 +36,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TMP_Text NickNameText;
     [SerializeField] private PhotonView PlayerInputView;
     [SerializeField] GameObject AllGameObject;
-
+    [SerializeField] private VariableJoystick _joystick;
+    [SerializeField] private GameObject _jumpButton;
+    [SerializeField] private GameObject _interactButton;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.lockState = CursorLockMode.Locked;
         NickNameText.text = view.Owner.NickName;
         // NickNameText.text = "AAAA";
-
         currSpeed = Speed;
         if (!view.IsMine)
         {
@@ -46,17 +52,42 @@ public class PlayerController : MonoBehaviour
             gameObject.SetActive(false);
             PlayerCamera.enabled = false;
         }
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            _joystick.gameObject.SetActive(true);
+            _jumpButton.SetActive(true);
+            Debug.Log("thisgame run on android");
+        }
+        else
+        {
+            _joystick.gameObject.SetActive(false);
+            _jumpButton.SetActive(false);
+            _interactButton.SetActive(false);
+            Debug.Log("thisgame not run on android");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (view.IsMine)
         {
-            PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                PlayerMovementInput = new Vector3(_joystick.Horizontal, 0f, _joystick.Vertical);
+            }
+            else
+            {
+                PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+            }
             MovePlayer();
         }
+    }
+    void testdebug()
+    {
+        Debug.Log("TstDebug");
     }
     private void MovePlayer()
     {
@@ -64,9 +95,9 @@ public class PlayerController : MonoBehaviour
         if (Controller.isGrounded)
         {
             Velocity.y = -1f;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || _jumpButtonPressed)
             {
-                Velocity.y = Jumpforce;
+                Jump();
             }
         }
         else
@@ -75,6 +106,11 @@ public class PlayerController : MonoBehaviour
         }
         Controller.Move(currSpeed * Time.deltaTime * MoveVector);
         Controller.Move(Velocity * Time.deltaTime);
+    }
+    public void Jump()
+    {
+        Velocity.y = Jumpforce;
+        Debug.Log("Plyaer Jump!");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -87,18 +123,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Grabable"))
         {
-            if (Input.GetKey(KeyCode.F))
+            if (Application.platform == RuntimePlatform.Android)
             {
-                PlayerInputView.RPC("JointConnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
-                Debug.Log("This Player ATtach joint");
-                // other.attachedRigidbody.isKinematic = false;
-                currSpeed = GrabSpeed;
+                _interactButton.SetActive(true);
+            }
+            if (Input.GetKey(KeyCode.F) || _interactButtonHoldedVar)
+            {
+                ConnectJointWithObject(other);
             }
             else
             {
-                PlayerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
-                // other.attachedRigidbody.isKinematic = true;
-                currSpeed = Speed;
+                RemoveJointWithObject(other);
             }
         }
     }
@@ -111,9 +146,42 @@ public class PlayerController : MonoBehaviour
         }
         if (other.CompareTag("Grabable"))
         {
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                _interactButton.SetActive(false);
+            }
             // other.attachedRigidbody.isKinematic = true;
             PlayerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
         }
+        currSpeed = Speed;
+    }
+    public void JumpButtonPressed()
+    {
+        _jumpButtonPressed = true;
+    }
+    public void JumpButtonNotPressed()
+    {
+        _jumpButtonPressed = false;
+    }
+    public void InteractButtonHolded()
+    {
+        _interactButtonHoldedVar = true;
+        // Debug.Log("InteractButtonHolded = " + _interactButtonHoldedVar);
+    }
+    public void InteractButtonNotHolded()
+    {
+        _interactButtonHoldedVar = false;
+        // Debug.Log("InteractButtonHolded = " + _interactButtonHoldedVar);
+    }
+    private void ConnectJointWithObject(Collider other)
+    {
+        PlayerInputView.RPC("JointConnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+        currSpeed = GrabSpeed;
+    }
+    private void RemoveJointWithObject(Collider other)
+    {
+        PlayerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+        // other.attachedRigidbody.isKinematic = true;
         currSpeed = Speed;
     }
     [PunRPC]
