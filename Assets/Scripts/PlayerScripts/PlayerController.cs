@@ -58,13 +58,13 @@ public class PlayerController : MonoBehaviour
             _jumpButton.SetActive(true);
             Debug.Log("thisgame run on android");
         }
-        else
-        {
-            _joystick.gameObject.SetActive(false);
-            _jumpButton.SetActive(false);
-            _interactButton.SetActive(false);
-            Debug.Log("thisgame not run on android");
-        }
+        // else
+        // {
+        //     _joystick.gameObject.SetActive(false);
+        //     _jumpButton.SetActive(false);
+        //     _interactButton.SetActive(false);
+        //     Debug.Log("thisgame not run on android");
+        // }
     }
 
     // Update is called once per frame

@@ -90,8 +90,9 @@ public class PlayerDieScript : MonoBehaviourPunCallbacks
     void PlayerRespawn()
     {
         _isDead = false;
-
-        _playerInputGameObject.SetActive(true);
+        if(view.IsMine){
+            _playerInputGameObject.SetActive(true);  
+        }
         _playerAvatarGameObject.SetActive(true);
         _timeToRespawnCounter = _timeToRespawn;
         gameObject.transform.position = SpawnPos;
