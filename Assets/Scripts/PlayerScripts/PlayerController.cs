@@ -83,6 +83,9 @@ public class PlayerController : MonoBehaviour
                 PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             }
             MovePlayer();
+            if(Input.GetKeyDown(KeyCode.L)){
+                AllGameObject.transform.position = new Vector3(502f,43f,480f);
+            }
         }
     }
     void testdebug()
