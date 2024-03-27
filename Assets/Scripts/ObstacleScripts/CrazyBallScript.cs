@@ -29,7 +29,6 @@ public class CrazyBallScript : MonoBehaviour
             _randomMoveTimerCounter = _randomMoveTimer;
         }else{
                 _rb.AddForce(_axisX, 0f, _axisZ);
-
             _randomMoveTimerCounter -= Time.deltaTime;
         }
     }
