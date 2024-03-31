@@ -15,42 +15,43 @@ using UnityEngine.UI;
 using Photon.Voice;
 public class PlayerController : MonoBehaviour
 {
-    private Vector3 Velocity;
-    private Vector3 PlayerMovementInput;
-    private Vector2 PlayerMouseInput;
+    private Vector3 _velocity;
+    private Vector3 _playerMovementInput;
+    private Vector2 _playerMouseInput;
     [SerializeField] private bool _interactButtonHoldedVar = false;
     [SerializeField] private bool _jumpButtonPressed = false;
-    [SerializeField] private float currSpeed;
+    [SerializeField] private float _currSpeed;
 
-    [SerializeField] private FixedJoint GrabJoint;
-    [SerializeField] private Transform followTransfrom;
-    [SerializeField] private CharacterController Controller;
-    [SerializeField] private PlayerCam PlayerCamera;
+    [SerializeField] private FixedJoint _grabJoint;
+    [SerializeField] private Transform _followTransform;
+    [SerializeField] private CharacterController _controller;
+    [SerializeField] private PlayerCam _playerCamera;
     [SerializeField] private GameObject PlayerCameraObject;
-    [SerializeField] private float Speed;
-    [SerializeField] private float GrabSpeed;
-    [SerializeField] private float Jumpforce;
-    [SerializeField] private float Sensitivity;
-    [SerializeField] private float Gravity = -9.81f;
-    [SerializeField] private PhotonView view;
-    [SerializeField] private TMP_Text NickNameText;
-    [SerializeField] private PhotonView PlayerInputView;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _grabSpeed;
+    [SerializeField] private float _jumpForce;
+    [SerializeField] private float _sensitivity;
+    [SerializeField] private float _gravity = -9.81f;
+    [SerializeField] private PhotonView _view;
+    [SerializeField] private TMP_Text __nicknameText;
+    [SerializeField] private PhotonView _playerInputView;
     [SerializeField] GameObject AllGameObject;
     [SerializeField] private VariableJoystick _joystick;
     [SerializeField] private GameObject _jumpButton;
     [SerializeField] private GameObject _interactButton;
+    [SerializeField] private Animator _anim;
     // Start is called before the first frame update
     void Start()
     {
         // Cursor.lockState = CursorLockMode.Locked;
-        NickNameText.text = view.Owner.NickName;
-        // NickNameText.text = "AAAA";
-        currSpeed = Speed;
-        if (!view.IsMine)
+        __nicknameText.text = _view.Owner.NickName;
+        // __nicknameText.text = "AAAA";
+        _currSpeed = _speed;
+        if (!_view.IsMine)
         {
             PlayerCameraObject.SetActive(false);
             gameObject.SetActive(false);
-            PlayerCamera.enabled = false;
+            _playerCamera.enabled = false;
         }
         if (Application.platform == RuntimePlatform.Android)
         {
@@ -70,22 +71,25 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (view.IsMine)
+        if (_view.IsMine)
         {
-            PlayerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            _playerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             if (Application.platform == RuntimePlatform.Android)
             {
-                PlayerMovementInput = new Vector3(_joystick.Horizontal, 0f, _joystick.Vertical);
+                _playerMovementInput = new Vector3(_joystick.Horizontal, 0f, _joystick.Vertical);
             }
             else
             {
-                PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+                _playerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             }
             MovePlayer();
-            if(Input.GetKeyDown(KeyCode.L)){
-                AllGameObject.transform.position = new Vector3(502f,43f,480f);
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                AllGameObject.transform.position = new Vector3(502f, 43f, 480f);
             }
+            _anim.SetFloat("Hinput", _playerMovementInput.z);
+            _anim.SetFloat("Vinput", _playerMovementInput.x);
+
         }
     }
     void testdebug()
@@ -94,10 +98,19 @@ public class PlayerController : MonoBehaviour
     }
     private void MovePlayer()
     {
-        Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput);
-        if (Controller.isGrounded)
+        Vector3 MoveVector = transform.TransformDirection(_playerMovementInput);
+        if (_controller.isGrounded)
         {
-            Velocity.y = -1f;
+            _anim.SetBool("Jumping", false);
+            if (_playerMovementInput.magnitude > 0.1)
+            {
+                _anim.SetBool("Walking", true);
+            }
+            else
+            {
+                _anim.SetBool("Walking", false);
+            }
+            _velocity.y = -1f;
             if (Input.GetKeyDown(KeyCode.Space) || _jumpButtonPressed)
             {
                 Jump();
@@ -105,21 +118,22 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Velocity.y -= Gravity * -2f * Time.deltaTime;
+            _velocity.y -= _gravity * -2f * Time.deltaTime;
         }
-        Controller.Move(currSpeed * Time.deltaTime * MoveVector);
-        Controller.Move(Velocity * Time.deltaTime);
+        _controller.Move(_currSpeed * Time.deltaTime * MoveVector);
+        _controller.Move(_velocity * Time.deltaTime);
     }
     public void Jump()
     {
-        Velocity.y = Jumpforce;
+        _velocity.y = _jumpForce;
         Debug.Log("Plyaer Jump!");
+        _anim.SetBool("Jumping", true);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("MovePlatform"))
         {
-            PlayerInputView.RPC("AttachChild", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+            _playerInputView.RPC("AttachChild", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
         }
     }
     private void OnTriggerStay(Collider other)
@@ -133,10 +147,12 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.F) || _interactButtonHoldedVar)
             {
                 ConnectJointWithObject(other);
+                _anim.SetBool("Pushing", true);
             }
             else
             {
                 RemoveJointWithObject(other);
+                _anim.SetBool("Pushing", false);
             }
         }
     }
@@ -145,7 +161,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("MovePlatform"))
         {
-            PlayerInputView.RPC("DetachChild", RpcTarget.All);
+            _playerInputView.RPC("DetachChild", RpcTarget.All);
         }
         if (other.CompareTag("Grabable"))
         {
@@ -154,9 +170,10 @@ public class PlayerController : MonoBehaviour
                 _interactButton.SetActive(false);
             }
             // other.attachedRigidbody.isKinematic = true;
-            PlayerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+            _playerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+            _anim.SetBool("Pushing", false);
         }
-        currSpeed = Speed;
+        _currSpeed = _speed;
     }
     public void JumpButtonPressed()
     {
@@ -178,20 +195,20 @@ public class PlayerController : MonoBehaviour
     }
     private void ConnectJointWithObject(Collider other)
     {
-        PlayerInputView.RPC("JointConnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
-        currSpeed = GrabSpeed;
+        _playerInputView.RPC("JointConnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+        _currSpeed = _grabSpeed;
     }
     private void RemoveJointWithObject(Collider other)
     {
-        PlayerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
+        _playerInputView.RPC("JoinDisconnect", RpcTarget.All, other.gameObject.GetPhotonView().ViewID);
         // other.attachedRigidbody.isKinematic = true;
-        currSpeed = Speed;
+        _currSpeed = _speed;
     }
     [PunRPC]
     void JointConnect(int targetView)
     {
         PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>().isKinematic = false;
-        GrabJoint.connectedBody = PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>();
+        _grabJoint.connectedBody = PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>();
 
     }
 
@@ -200,7 +217,7 @@ public class PlayerController : MonoBehaviour
     {
         PhotonView.Find(targetView).gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
-        GrabJoint.connectedBody = null;
+        _grabJoint.connectedBody = null;
     }
 
     [PunRPC]

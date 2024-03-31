@@ -19,12 +19,15 @@ public class PushToTalk : MonoBehaviourPunCallbacks
         {
             instance = this;
             _recorder = GetComponent<Recorder>();
+            // DontDestroyOnLoad(this);
+
         }
         else
         {
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this);
+
     }
     private void EnableTalking()
     {
