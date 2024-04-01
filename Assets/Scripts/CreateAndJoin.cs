@@ -11,22 +11,28 @@ public class CreateAndJoin : MonoBehaviourPunCallbacks
     public TMP_InputField input_create;
     public TMP_InputField input_join;
     public int RoomIDCounter;
-    public void CreateRoom(){
-        PhotonNetwork.CreateRoom(input_create.text, new RoomOptions(){MaxPlayers = 2,PlayerTtl = 10000,CleanupCacheOnLeave = true}, TypedLobby.Default, null);
+    public void CreateRoom()
+    {
+        PhotonNetwork.CreateRoom(input_create.text, new RoomOptions() { MaxPlayers = 2, PlayerTtl = 10000, CleanupCacheOnLeave = true }, TypedLobby.Default, null);
     }
-    public void JoinRoom(){
+    public void JoinRoom()
+    {
         PhotonNetwork.JoinRoom(input_join.text);
     }
-    public void JoinRoomInList(string RoomName){
+    public void JoinRoomInList(string RoomName)
+    {
         PhotonNetwork.JoinRoom(RoomName);
     }
-    public void MatchMaking(){
-        
-        if(PhotonNetwork.IsConnected && PhotonNetwork.Server == ServerConnection.GameServer){
+    public void MatchMaking()
+    {
+
+        if (PhotonNetwork.IsConnected && PhotonNetwork.Server == ServerConnection.GameServer)
+        {
             PhotonNetwork.LeaveRoom();
             return;
         }
-        if(!PhotonNetwork.IsConnected){
+        if (!PhotonNetwork.IsConnected)
+        {
             PhotonNetwork.ConnectUsingSettings();
             return;
         }
@@ -35,43 +41,16 @@ public class CreateAndJoin : MonoBehaviourPunCallbacks
     }
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
-        PhotonNetwork.CreateRoom(System.Guid.NewGuid().ToString()[..3], new RoomOptions(){MaxPlayers = 2,PlayerTtl = 10000,CleanupCacheOnLeave = true}, TypedLobby.Default, null);
+        PhotonNetwork.CreateRoom(System.Guid.NewGuid().ToString()[..3], new RoomOptions() { MaxPlayers = 2, PlayerTtl = 10000, CleanupCacheOnLeave = true }, TypedLobby.Default, null);
         base.OnJoinRandomFailed(returnCode, message);
     }
-    public override void OnJoinedRoom(){
+    public override void OnJoinedRoom()
+    {
         PhotonNetwork.LoadLevel("InGame");
         Debug.Log(PhotonNetwork.CountOfPlayersInRooms);
     }
-    public void Reconnect(){
+    public void Reconnect()
+    {
         PhotonNetwork.ReconnectAndRejoin();
     }
-    // public override void OnJoinedLobby()
-    // {
-    //     if(PhotonNetwork.IsConnected && PhotonNetwork.Server == ServerConnection.GameServer){
-    //         PhotonNetwork.LeaveRoom();
-    //         return;
-    //     }
-    //     if(!PhotonNetwork.IsConnected){
-    //         PhotonNetwork.ConnectUsingSettings();
-    //         return;
-    //     }
-    //     base.OnJoinedLobby();
-    // }
-    public override void OnDisconnected(DisconnectCause cause)
-    {
-        // base.OnDisconnected(cause);
-        // if(PhotonNetwork.IsConnected && PhotonNetwork.Server == ServerConnection.GameServer){
-        //     PhotonNetwork.LeaveRoom();
-        //     return;
-        // }
-        // if(!PhotonNetwork.IsConnected){
-        //     PhotonNetwork.ConnectUsingSettings();
-        //     return;
-        // }
-    }
-    // public override void OnJoinRoomFailed(short returnCode, string message)
-    // {
-    //     Debug.Log("Failed to Join Room");
-    //     base.OnJoinRoomFailed(returnCode, message);
-    // }
 }

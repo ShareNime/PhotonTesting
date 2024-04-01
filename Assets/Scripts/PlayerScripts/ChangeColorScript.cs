@@ -9,16 +9,17 @@ using UnityEngine.SceneManagement;
 
 public class ChangeColorScript : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private Renderer mats;
-    [SerializeField] private Material redmats;
-    [SerializeField] private PhotonView view;
-    [SerializeField] float red;
-    [SerializeField] float green;
-    [SerializeField] float blue;
-    float[] rgb = new float[3];
-    [SerializeField] ChangeColorScript aaa;
+    [SerializeField] private Renderer _avatarMats;
+    [SerializeField] private Renderer _pointMats;
+    [SerializeField] private Material _redMats;
+    [SerializeField] private PhotonView _view;
+    [SerializeField] float _red;
+    [SerializeField] float _green;
+    [SerializeField] float _blue;
+    private float[] _rgb = new float[3];
+    [SerializeField] ChangeColorScript _aaa;
     private Color _color;
-    public Player player;
+    public Player Player;
     private ExitGames.Client.Photon.Hashtable _myColorCustomProperties = new ExitGames.Client.Photon.Hashtable();
 
     // Start is called before the first frame update
@@ -29,26 +30,26 @@ public class ChangeColorScript : MonoBehaviourPunCallbacks
         {
             if (!PhotonNetwork.LocalPlayer.CustomProperties.ContainsKey("RandomColor"))
             {
-                red = UnityEngine.Random.Range(0, 226 / 255f);
-                green = UnityEngine.Random.Range(0, 226 / 255f);
-                blue = UnityEngine.Random.Range(0, 226 / 255f);
-                rgb = new float[] { red, green, blue };
-                _myColorCustomProperties.Add("RandomColor", rgb);
+                _red = UnityEngine.Random.Range(0, 226 / 255f);
+                _green = UnityEngine.Random.Range(0, 226 / 255f);
+                _blue = UnityEngine.Random.Range(0, 226 / 255f);
+                _rgb = new float[] { _red, _green, _blue };
+                _myColorCustomProperties.Add("RandomColor", _rgb);
                 PhotonNetwork.LocalPlayer.SetCustomProperties(_myColorCustomProperties);
-                if (view.IsMine)
+                if (_view.IsMine)
                 {
-                    view.RPC("ChangeColor", RpcTarget.AllBuffered, rgb[0], rgb[1], rgb[2]);
+                    _view.RPC("ChangeColor", RpcTarget.AllBuffered, _rgb[0], _rgb[1], _rgb[2]);
                 }
             }
             else
             {
                 Debug.Log("Color has been generated");
-                if (view.IsMine)
+                if (_view.IsMine)
                 {
                     if (PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue("RandomColor", out object rgbColor))
                     {
-                        rgb = (float[])rgbColor;
-                        view.RPC("ChangeColor", RpcTarget.AllBuffered, rgb[0], rgb[1], rgb[2]);
+                        _rgb = (float[])rgbColor;
+                        _view.RPC("ChangeColor", RpcTarget.AllBuffered, _rgb[0], _rgb[1], _rgb[2]);
                     }
                     else
                     {
@@ -64,6 +65,7 @@ public class ChangeColorScript : MonoBehaviourPunCallbacks
     private void ChangeColor(float r, float g, float b)
     {
         Debug.Log("color changed");
-        mats.material.color = new Color(r, g, b);
+        _avatarMats.material.color = new Color(r, g, b);
+        _pointMats.material.color = new Color(r,g,b);
     }
 }

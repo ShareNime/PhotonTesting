@@ -11,11 +11,6 @@ public class ConnectAndDisconnectScript : MonoBehaviourPunCallbacks
     [SerializeField] GameObject MenuPanel;
     [SerializeField] bool isMenuOpen = false;
     private Player player;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -51,25 +46,11 @@ public class ConnectAndDisconnectScript : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("Lobby");
         base.OnLeftRoom();
     }
-    // public void DisconnectPlayer(){
-    //     StartCoroutine(DisconnectAndLoad());
-    // }
-    // IEnumerator DisconnectAndLoad(){
-    //     // PhotonNetwork.Disconnect();
-
-    //     while(PhotonNetwork.IsConnected){
-    //         // yield return null;
-
-    //     }
-    // }
     public override void OnDisconnected(DisconnectCause cause)
     {
 
         base.OnDisconnected(cause);
         Debug.LogWarning("You have been disconnected");
-
-        // PhotonNetwork.Reconnect();
-
         PhotonNetwork.LoadLevel("Loading");
 
     }

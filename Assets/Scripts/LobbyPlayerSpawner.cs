@@ -10,8 +10,10 @@ public class LobbyPlayerSpawner : MonoBehaviourPunCallbacks
     [SerializeField] private Renderer mats;
     [SerializeField] private Material redmats;
     [SerializeField] bool _isSpawned = false;
-    private void Awake() {
-        if(!_isSpawned){
+    private void Awake()
+    {
+        if (!_isSpawned)
+        {
             PhotonNetwork.Instantiate("PlayerNew 1", new Vector3(Random.Range(posSpawn.position.x, posSpawn.position.x + 20), posSpawn.position.y, Random.Range(posSpawn.position.z, posSpawn.position.z + 20)), Quaternion.identity);
             _isSpawned = true;
         }
@@ -19,7 +21,7 @@ public class LobbyPlayerSpawner : MonoBehaviourPunCallbacks
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         base.OnPlayerLeftRoom(otherPlayer);
-        
+
         Debug.Log(otherPlayer.NickName + " has left the game");
     }
 }
